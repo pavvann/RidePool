@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.search_page {
+  background: url("https://images.pexels.com/photos/17174463/pexels-photo-17174463/free-photo-of-brown-vintage-car.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") aliceblue;
+  background-size: auto;
+  background-size: cover;
+}
+
+.search_page:after{
+    content: "";
+    position: absolute;
+    inset: 0px 0px -104px;
+    background: linear-gradient(rgba(0, 1, 13, 0) 0%, rgba(0, 1, 13, 0.1) 5%, rgb(0, 1, 13) 100%);
+    z-index:10;
+}
